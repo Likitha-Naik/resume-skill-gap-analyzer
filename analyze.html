@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Resume Skill Gap Analyzer</h1>
+    <p class="subtitle">Upload your resume and paste the job description to analyze ATS compatibility</p>
+
+    <form method="post" action="/dashboard" enctype="multipart/form-data">
+
+        <label class="label">Upload Resume (PDF)</label>
+        <input type="file" name="resume" required class="input-file">
+
+        <label class="label">Job Description</label>
+        <textarea name="jd" rows="8" placeholder="Paste job description here..." required></textarea>
+
+        <button type="submit" class="btn">Analyze Resume</button>
+    </form>
+</div>
+
+</body>
+</html>
