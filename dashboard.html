@@ -17,11 +17,14 @@
 
     <div class="score-card">
         <h2>ATS Score</h2>
-        <div class="progress">
-            <div class="progress-fill" style="width: {{ats}} %;">
-                {{ ats }}%
+            <div class="progress">
+                <div class="progress-fill" style="--progress: {{ ats }}%;">
+                    {{ ats }}%
+                </div>
+
+
+
             </div>
-        </div>
     </div>
 
     <div class="stats">
