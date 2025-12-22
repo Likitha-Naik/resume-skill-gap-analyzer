@@ -1,6 +1,34 @@
-<form method="post">
-<h2>Login</h2>
-<input name="username" placeholder="Username">
-<input name="password" type="password" placeholder="Password">
-<button>Login</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Resume Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Login to continue</p>
+
+        {% if error %}
+            <p class="error-msg">{{ error }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p class="auth-footer">
+            New user? <a href="/register">Create an account</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
