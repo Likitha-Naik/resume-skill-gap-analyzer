@@ -1,6 +1,7 @@
 flask
-spacy
+spacy==3.7.2
 PyPDF2
 pandas
 scikit-learn
 werkzeug
+gunicorn
